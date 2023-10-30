@@ -28,6 +28,16 @@
 
             var result = "The total value is $" + total_dollars + "." + remaining_cents.toString().padStart(2, "0");
             document.getElementById("result").innerText = result;
+
+             // Calculate change left from $17
+            calculateChangeLeft(total_cents);
+        }
+
+        function calculateChangeLeft(totalCents) {
+            var remainingCents = 1700 - totalCents;
+            var dollarsLeft = Math.round(remainingCents / 100); // Round to the nearest dollar
+            var changeLeft = "Change left from $17: $" + dollarsLeft;
+            document.getElementById("changeLeft").innerText = changeLeft;
         }
     </script>
 </head>
