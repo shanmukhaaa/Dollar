@@ -36,7 +36,7 @@
         function calculateChangeLeft(totalCents) {
             var remainingCents = 1700 - totalCents;
             var dollarsLeft = Math.round(remainingCents / 100); // Round to the nearest dollar
-            var changeLeft = "Change left from $17: $" + dollarsLeft;
+            var changeLeft = "Change left from $17 is: " + dollarsLeft;
             document.getElementById("changeLeft").innerText = changeLeft;
         }
     </script>
@@ -46,7 +46,7 @@
     <label for="quarters">Number of quarters:</label>
     <input type="number" id="quarters" value="0"><br><br>
 
-    <label for="dimes">Number of dimes:</label>
+    <label for "dimes">Number of dimes:</label>
     <input type="number" id="dimes" value="0"><br><br>
 
     <label for="nickels">Number of nickels:</label>
@@ -55,5 +55,6 @@
     <button onclick="countChange()">Calculate</button>
 
     <h2 id="result"></h2>
+    <h2 id="changeLeft"></h2>
 </body>
 </html>
